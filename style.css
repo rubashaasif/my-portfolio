@@ -33,6 +33,164 @@
     --max-width: 1150px;
 
 }
+/* =====================================================
+   MOBILE COMPACT GRID
+   2-COLUMN LAYOUT FOR SMALL SCREENS
+===================================================== */
+
+@media (max-width: 650px) {
+
+    /* ---------- SERVICES ---------- */
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .service-card {
+        min-height: 170px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .service-card h3 {
+        font-size: 15px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+
+    .service-card p {
+        font-size: 10px;
+        line-height: 1.55;
+    }
+
+
+    /* ---------- PROJECT CATEGORIES ---------- */
+
+    .project-categories {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .project-category-card {
+        min-height: 0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .category-card-image {
+        height: 115px;
+    }
+
+    .category-card-content {
+        padding: 13px;
+        min-height: 125px;
+    }
+
+    .category-card-content h3 {
+        font-size: 15px;
+        line-height: 1.3;
+        margin-bottom: 7px;
+    }
+
+    .category-card-content p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .category-meta {
+        font-size: 8px;
+        margin-top: 8px;
+    }
+
+
+    /* ---------- PROJECTS ---------- */
+
+    .project-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .project-card {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .project-image {
+        height: 115px;
+    }
+
+    .project-content {
+        padding: 13px;
+    }
+
+    .project-content h3 {
+        font-size: 15px;
+        line-height: 1.3;
+        margin-bottom: 7px;
+    }
+
+    .project-content > p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+
+    /* ---------- CERTIFICATIONS ---------- */
+
+    .credentials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .credential-image {
+        height: 120px;
+    }
+
+    .credential-content {
+        padding: 13px;
+    }
+
+    .credential-content h3 {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .credential-content > p:not(.credential-issuer) {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .services-grid,
+    .project-categories,
+    .project-container,
+    .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+
+    .category-card-image,
+    .project-image {
+        height: 150px;
+    }
+
+    .credential-image {
+        height: 170px;
+    }
+}
 
 
 /* =====================================================
