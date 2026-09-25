@@ -2720,547 +2720,73 @@ img {
     }
 
 }
-/* =====================================================
-   MOBILE REFINEMENT
-   Keeps desktop design unchanged
-===================================================== */
-
+/* MOBILE COMPACT GRID */
 @media (max-width: 650px) {
 
-    /* ---------- GLOBAL ---------- */
-
-    html {
-        overflow-x: hidden;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .container {
-        width: min(calc(100% - 32px), var(--max-width));
-    }
-
-
-    /* ---------- NAVBAR ---------- */
-
-    .navbar {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-    .nav-container {
-        min-height: 64px;
-        padding: 12px 0;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .nav-menu {
-        width: 100%;
-        order: 3;
-
-        display: flex;
-        justify-content: flex-start;
-
-        gap: 18px;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        padding: 4px 2px 8px;
-
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .nav-menu::-webkit-scrollbar {
-        display: none;
-    }
-
-    .nav-menu a {
-        flex-shrink: 0;
-        font-size: 11px;
-    }
-
-
-    /* ---------- HERO ---------- */
-
-    .hero {
-        min-height: auto;
-        padding: 58px 0 65px;
-    }
-
-    .hero-container {
-        grid-template-columns: 1fr;
-        gap: 42px;
-    }
-
-    .hero-small-text {
-        font-size: 10px;
-        letter-spacing: 1.7px;
-        margin-bottom: 13px;
-    }
-
-    .hero h1 {
-        font-size: clamp(36px, 11vw, 48px);
-        line-height: 1.08;
-        letter-spacing: -2px;
-        margin-bottom: 14px;
-    }
-
-    .hero h2 {
-        font-size: 17px;
-        line-height: 1.5;
-        margin-bottom: 16px;
-    }
-
-    .hero-description {
-        font-size: 13px;
-        line-height: 1.75;
-        margin-bottom: 20px;
-    }
-
-
-    /* ---------- HERO TAGS ---------- */
-
-    .hero-focus {
-        gap: 7px;
-        margin-bottom: 23px;
-    }
-
-    .hero-focus span {
-        padding: 6px 9px;
-        font-size: 9px;
-    }
-
-
-    /* ---------- HERO BUTTONS ---------- */
-
-    .hero-buttons {
-        width: 100%;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-
-    .primary-button,
-    .secondary-button {
-        width: 100%;
-        min-height: 44px;
-        padding: 11px 16px;
-        font-size: 11px;
-    }
-
-    .hero-links {
-        gap: 20px;
-    }
-
-    .hero-links a {
-        font-size: 11px;
-    }
-
-
-    /* ---------- TOOLKIT CARD ---------- */
-
-    .hero-card {
-        width: 100%;
-        max-width: none;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .hero-card-top {
-        margin-bottom: 12px;
-        font-size: 8px;
-    }
-
-    .code-line {
-        gap: 14px;
-        padding: 12px 0;
-    }
-
-    .code-line span {
-        font-size: 9px;
-    }
-
-    .code-line strong {
-        font-size: 12px;
-    }
-
-
-    /* ---------- SECTIONS ---------- */
-
-    .section {
-        padding: 65px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 32px;
-    }
-
-    .section-heading > p:first-child {
-        font-size: 9px;
-        letter-spacing: 1.7px;
-    }
-
-    .section-heading h2 {
-        font-size: clamp(28px, 8vw, 36px);
-        letter-spacing: -1px;
-        line-height: 1.2;
-    }
-
-    .section-description {
-        font-size: 12px;
-        line-height: 1.7;
-    }
-
-
-    /* ---------- ABOUT ---------- */
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .about-text p {
-        font-size: 13px;
-        line-height: 1.8;
-        margin-bottom: 16px;
-    }
-
-    .about-highlights {
-        grid-template-columns: 1fr;
-        gap: 11px;
-    }
-
-    .highlight-card {
-        padding: 19px;
-    }
-
-    .highlight-label {
-        font-size: 8px;
-        margin-bottom: 8px;
-    }
-
-    .highlight-card h3 {
-        font-size: 16px;
-    }
-
-    .highlight-card p {
-        font-size: 11px;
-    }
-
-
-    /* ---------- SKILLS ---------- */
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .skill-card {
-        padding: 20px;
-    }
-
-    .skill-number {
-        margin-bottom: 13px;
-    }
-
-    .skill-card h3 {
-        font-size: 16px;
-    }
-
-    .skill-card p {
-        font-size: 11px;
-    }
-
-
-    /* ---------- SERVICES ---------- */
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .service-card {
-        padding: 21px;
-    }
-
-    .service-card h3 {
-        font-size: 17px;
-    }
-
-    .service-card p {
-        font-size: 11px;
-    }
-
-
-    /* ---------- PROJECT CATEGORIES ---------- */
-
-    .project-categories {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .project-category-card {
-        min-height: auto;
-        border-radius: 9px;
-    }
-
-    .category-card-image {
-        height: 185px;
-    }
-
-    .category-card-content {
-        padding: 19px;
-        min-height: 155px;
-    }
-
-    .category-card-content h3 {
-        font-size: 18px;
-    }
-
-    .category-card-content p {
-        font-size: 11px;
-    }
-
-    .category-meta {
-        font-size: 9px;
-    }
-
-
-    /* ---------- PROJECT LIST ---------- */
-
-    .project-list-header {
-        margin-bottom: 24px;
-    }
-
-    .project-list-header h3 {
-        font-size: 26px;
-    }
-
-    .project-list-header p {
-        font-size: 12px;
-    }
-
-    .back-to-categories {
-        font-size: 11px;
-        margin-bottom: 24px;
-    }
-
-    .project-container {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .project-image {
-        height: 185px;
-    }
-
-    .project-content {
-        padding: 19px;
-    }
-
-    .project-content h3 {
-        font-size: 18px;
-    }
-
-    .project-content > p {
-        font-size: 11px;
-        line-height: 1.7;
-    }
-
-
-    /* ---------- CERTIFICATIONS ---------- */
-
-    .credentials-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .credential-image {
-        height: 200px;
-    }
-
-    .credential-content {
-        padding: 19px;
-    }
-
-    .credential-content h3 {
-        font-size: 17px;
-    }
-
-    .credential-content > p:not(.credential-issuer) {
-        font-size: 11px;
-    }
-
-
-    /* ---------- EDUCATION ---------- */
-
-    .timeline-item {
-        padding-left: 30px;
-        margin-bottom: 25px;
-    }
-
-    .timeline-content {
-        padding: 19px;
-    }
-
-    .timeline-content h3 {
-        font-size: 17px;
-    }
-
-    .timeline-content p {
-        font-size: 11px;
-    }
-
-
-    /* ---------- CONTACT ---------- */
-
-    .contact-box {
-        padding: 42px 20px;
-    }
-
-    .contact-description {
-        font-size: 12px;
-        line-height: 1.7;
-    }
-
-    .contact-links {
-        flex-direction: column;
-        gap: 9px;
-    }
-
-    .contact-links a {
-        width: 100%;
-        padding: 11px 15px;
-        font-size: 10px;
-    }
-
-
-    /* ---------- PROJECT MODAL ---------- */
-
-    .project-modal {
-        padding: 12px;
-        align-items: center;
-    }
-
-    .project-modal-content {
-        width: 100%;
-        max-height: 88vh;
-        padding: 27px 18px 22px;
-        border-radius: 9px;
-    }
-
-    .modal-close {
-        right: 13px;
-        top: 8px;
-        font-size: 25px;
-    }
-
-    .modal-category {
-        font-size: 9px;
-    }
-
-    .project-modal-content h2 {
-        font-size: 24px;
-        line-height: 1.25;
-        padding-right: 25px;
-    }
-
-    .modal-description {
-        font-size: 12px;
-        line-height: 1.75;
-    }
-
-    .project-modal-content h3 {
-        font-size: 14px;
-    }
-
-    .modal-highlights {
-        padding-left: 18px;
-    }
-
-    .modal-highlights li {
-        font-size: 11px;
-        line-height: 1.6;
-    }
-
-    .modal-links {
-        flex-wrap: wrap;
-        gap: 9px;
-    }
-
-
-    /* ---------- FOOTER ---------- */
-
-    .footer {
-        padding: 22px 0;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 8px;
-    }
-
-    .footer p {
-        font-size: 9px;
-        line-height: 1.6;
-    }
+  /* Services: 2 cards per row */
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .service-card {
+    min-height: 175px;
+    padding: 16px;
+  }
+
+  /* Project Categories: 2 cards per row */
+  .project-categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .category-card-image {
+    height: 105px;
+  }
+
+  .category-card-content {
+    padding: 12px;
+    min-height: 105px;
+  }
+
+  /* Projects inside a category: 2 cards per row */
+  .project-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .project-image {
+    height: 110px;
+  }
+
+  .project-content {
+    padding: 12px;
+  }
+
+  /* Certifications: 2 cards per row */
+  .credentials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .credential-image {
+    height: 110px;
+  }
+
+  .credential-content {
+    padding: 12px;
+  }
 }
 
 
-/* =====================================================
-   EXTRA SMALL PHONES
-===================================================== */
+/* Keep 2-column compact layout even on very small phones */
+@media (max-width: 360px) {
 
-@media (max-width: 380px) {
+  .services-grid,
+  .project-categories,
+  .project-container,
+  .credentials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-    .container {
-        width: calc(100% - 24px);
-    }
-
-    .hero {
-        padding: 48px 0 55px;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .hero h2 {
-        font-size: 16px;
-    }
-
-    .hero-description {
-        font-size: 12px;
-    }
-
-    .hero-card {
-        padding: 17px;
-    }
-
-    .code-line {
-        padding: 10px 0;
-    }
-
-    .section {
-        padding: 55px 0;
-    }
-
-    .category-card-image,
-    .project-image {
-        height: 170px;
-    }
-
-    .credential-image {
-        height: 180px;
-    }
 }
